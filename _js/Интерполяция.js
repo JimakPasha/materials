@@ -11,9 +11,8 @@ console.log('https://about:blank/' + category); // сайт написал дл�
 console.log('https://about:blank/' + category + '/' + '4');
 // это оч запаристо
 
-console.log(`https://about:blank/${category}/4`);  
+console.log(`https://about:blank/${category}/4`);
 // с помощью бэктиков используем интерполяцию
-
 
 // ещё пример
 
