@@ -21,3 +21,12 @@ __proto__ ссылается на prototype класса функции-конс
 
 // https://www.youtube.com/watch?v=b55hiUlhAzI
 
+
+let a = Object.create({key: 'val'})
+console.log(a);
+
+a.key
+
+a.key = 'hello'
+
+console.log(a.key);
