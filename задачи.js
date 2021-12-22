@@ -94,7 +94,7 @@ askPassword(user.login.bind(user, result)); // ?
 
 +9. Promise then, catch, finally   *****
 +10. throw new Error(), обработка ошибок ****
-11. DOM, preventDefault, stopPropagation, stopImmideatePropagation  **
++11. DOM, preventDefault, stopPropagation, stopImmideatePropagation  **
 12. currentTarget, target, this разница  **
 +13. стрелочные функции отличие function от стрелочной ****
   - this у стрелки эквивалентно значению this внешней функции
@@ -115,11 +115,11 @@ askPassword(user.login.bind(user, result)); // ?
 
 +18. Живая неживая коллекция *
 +19. карирование ****
-20. AJAX *****
-21. get post в чем разница *****
-22. put patch ****
-23. websocket, long polling ****
-24. REST *****
-25. swager, postman
-26. CI CD
-27. CDN
++20. AJAX *****
++21. get post в чем разница *****
++22. put patch ****
++23. websocket, long polling ****
++24. REST *****
++25. swager, postman
++26. CI CD
++27. CDN
