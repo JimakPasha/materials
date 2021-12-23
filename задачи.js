@@ -123,3 +123,13 @@ askPassword(user.login.bind(user, result)); // ?
 +25. swager, postman
 +26. CI CD
 +27. CDN
+
+
+
+const user = {
+  asd: 1,
+  asf4w3f: 3,
+}
+
+const clone = Object.assign({}, user);
+console.log(clone);
