@@ -126,10 +126,53 @@ askPassword(user.login.bind(user, result)); // ?
 
 
 
-const user = {
-  asd: 1,
-  asf4w3f: 3,
+
+
+
+
+/**
+  Есть массив операций.
+  Необходимо операции отсортировать по дате и сгруппировать их по году, а в качестве 
+  значений представить массивы c датами в формате MM-DD.
+  Пример результата:
+  result = {
+    "2017": [
+      "07-31",
+      "08-22"
+    ],
+    "2018": [
+      "01-01"
+      "02-22"
+    ]
+  }
+*/
+
+const operations = [
+  { "date": "2017-07-31", "amount": "5422" },
+  // { "date": "2017-06-30", "amount": "5220" },
+  // { "date": "2017-05-31", "amount": "5365" },
+  // { "date": "2017-08-31", "amount": "5451" },
+  // { "date": "2017-09-30", "amount": "5303" },
+  // { "date": "2018-03-31", "amount": "5654" },
+  // { "date": "2017-10-31", "amount": "5509" },
+  // { "date": "2017-12-31", "amount": "5567" },
+  // { "date": "2018-01-31", "amount": "5597" },
+  // { "date": "2017-11-30", "amount": "5359" },
+  // { "date": "2018-02-28", "amount": "5082" },
+  // { "date": "2018-04-14", "amount": "2567" }
+];
+
+function sortOperations(operations) {
+  operations.map((item) => {
+    const d = item.date.split('-');
+    const newArr = d.map((i) => {
+      return +i + 30;
+    });
+    const superNewArr = newArr.reduce((acc, curr) => {
+      return acc + curr;
+    }, []);
+    console.log(superNewArr);
+  });
 }
 
-const clone = Object.assign({}, user);
-console.log(clone);
+console.log(sortOperations(operations));

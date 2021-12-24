@@ -1,3 +1,17 @@
+function validator(str) {}
+
+validator('()'); // true
+validator('()[]'); // true
+validator('()[]{}'); // true
+validator('()[]{'); // false
+validator('{]'); // false
+validator('({)}'); // false
+validator('([{}])'); // true
+validator('(([{}])'); // false
+
+// -------------------------------------
+// решение 1
+
 function validator(str) {
   const arr = str.split('');
   const stack = [];
@@ -20,12 +34,3 @@ function validator(str) {
     return true;
   }
 }
-
-validator('()'); // true
-validator('()[]'); // true
-validator('()[]{}'); // true
-validator('()[]{'); // false
-validator('{]'); // false
-validator('({)}'); // false
-validator('([{}])'); // true
-validator('(([{}])'); // false
