@@ -1,31 +1,14 @@
-function validator(str) {
-  const arr = str.split('');
-  const stack = [];
-
-  arr.forEach((i) => {
-    if (i === '(' || i === '[' || i === '{') {
-      stack.push(i);
-    } else if (
-      (i === ')' && stack[stack.length - 1] === '(') ||
-      (i === '}' && stack[stack.length - 1] === '{') ||
-      (i === ']' && stack[stack.length - 1] === '[')
-    ) {
-      stack.pop();
-    } else return;
-  });
-
-  if (stack.length > 0) {
-    return false;
-  } else {
-    return true;
-  }
+function scoreboard(string) {
+  const typeObj = {
+    nil: 0,
+    one: 1,
+    two: 2,
+    three: 3,
+    four: 4,
+    five: 5,
+    six: 6,
+    seven: 7,
+    eight: 8,
+    nine: 9,
+  };
 }
-
-validator('()'); // true
-validator('()[]'); // true
-validator('()[]{}'); // true
-validator('()[]{'); // false
-validator('{]'); // false
-validator('({)}'); // false
-validator('([{}])'); // true
-validator('(([{}])'); // false
