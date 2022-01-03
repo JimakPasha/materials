@@ -1,14 +1,18 @@
-function scoreboard(string) {
-  const typeObj = {
-    nil: 0,
-    one: 1,
-    two: 2,
-    three: 3,
-    four: 4,
-    five: 5,
-    six: 6,
-    seven: 7,
-    eight: 8,
-    nine: 9,
-  };
+function foo() {
+  console.log(this.a);
 }
+
+function doFoo(fn) {
+  // `fn` — просто еще одна ссылка на `foo`
+
+  fn(); // <-- точка вызова!
+}
+
+var obj = {
+  a: 2,
+  foo: foo,
+};
+
+var a = 'ой, глобальная'; // `a` еще и переменная в глобальном объекте
+
+doFoo(obj.foo.call(obj)); // "ой, глобальная"
