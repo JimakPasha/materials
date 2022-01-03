@@ -54,5 +54,15 @@ docker rmi ********
 docker rm [длинная айдиха контейнера]
 а затем имедж стираем как выше описано
 
+ещё можно остановить докер
+docker stop ********
+
+сделать копию контейнера
+docker tag [название контейнера копию какого хотим сделать] [название копии]
+
+можно изнутри поменять содержимое
+sudo docker exec -t [id контейнера] /bin/bash .................. и тд. (39 мин видоса)
+
+
 установка Docker Compose
 https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-18-04-ru

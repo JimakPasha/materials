@@ -123,9 +123,3 @@ askPassword(user.login.bind(user, result)); // ?
 +25. swager, postman
 +26. CI CD
 +27. CDN
-
-
-
-
-
-
