@@ -47,3 +47,36 @@ Directions[2] // 'Up'
 Directions[4] // 'Down'
 Directions[5] // 'Left'
 Directions[6] // 'Right'
+
+// пример enum
+enum links {
+    youtube = 'youtube.com',
+    vk = 'vk.com',
+    facebook = 'facebook.com',
+}
+
+console.log(links.vk);
+console.log(links.youtube);
+
+// скомпилируемый код будет такой на js:
+"use strict";
+var links;
+(function (links) {
+    links["youtube"] = "youtube.com";
+    links["vk"] = "vk.com";
+    links["facebook"] = "facebook.com";
+})(links || (links = {}));
+
+// чаще используется такой подход, какой описали выше, но иногда стоят требования минимизировать и тогда, чтобы он так каждый раз не генерировал объект через функцию можно использовать константные enum
+const enum links {
+    youtube = 'youtube.com',
+    vk = 'vk.com',
+    facebook = 'facebook.com',
+}
+// скомпилируемый код будет такой на js:
+"use strict";
+// т.е. ничего не создаётся
+// если мы попытаемся создать обращение к enum
+const arr = [links.vk, links.facebook];
+// скомпилируемый код будет такой на js:
+const arr = ['vk.com', 'facebook.com'];
