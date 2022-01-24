@@ -23,3 +23,7 @@ useRef
 23.01
 Всплытие и погружение событий JS, currentTarget, target
 Порталы в React
+
+24.01
+HOC
+zoom
