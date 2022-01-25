@@ -2,7 +2,6 @@
 
 // функция по классификации является объектом и по идее в неё можно записать методы и свойства.
 
-
 // старый синтаксис создания функций-конструкторов
 const num = new Number(3); // создаём как бы новое число
 console.log(num);
@@ -10,23 +9,23 @@ console.log(num);
 const num2 = new Function(3); // и если такая функция будет содеражать методы и свойства, то она в итоге создаст нам новый объект
 console.log(num2);
 
-
 // новый синтаксис создания функций - конструкторов
 function User(name, id) {
 	this.name = name;
 	this.id = id;
 	this.human = true;
-	this.hello = function() { // так можем создать метод
+	this.hello = function () {
+		// так можем создать метод
 		console.log(`Hello, ${this.name}!`);
-	}
+	};
 }
 
-User.prototype.exit = function() {
-	console.log(`User ${this.name} exit`); 
-} // тем самым мы добавили новый метод для нашего объекта. и этот метод будет наследорваться у васех потомков нашего прототипа
+User.prototype.exit = function () {
+	console.log(`User ${this.name} exit`);
+}; // тем самым мы добавили новый метод для нашего объекта. и этот метод будет наследорваться у васех потомков нашего прототипа
 
 const ivan = new User('Ivan', 28); // тут мы создали новый объект
-const alex = new User ('Alex', 20);
+const alex = new User('Alex', 20);
 
 console.log(ivan);
 console.log(alex);
@@ -42,24 +41,21 @@ ivan.exit();
 
 // В JS изначально классов не было они появились в качестве синтаксического сахара. В др языках программирования это немножко не так.
 
-
-----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------
 // Далее конспект по видео
 // https://www.youtube.com/watch?v=5l01s6Vkqp0
 
 const Fn = function (name) {
+	this.getName = function () {
+		return this.name;
+	};
 
-  this.getName = function () {
-    return this.name;
-  }
+	this.setName = function (name) {
+		this.name = name;
+	};
 
-  this.setName = function (name) {
-    this.name = name;
-  }
-
-  this.setName(name);
-
-}
+	this.setName(name);
+};
 
 let obj = new Fn('Ben');
 

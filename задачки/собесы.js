@@ -175,3 +175,51 @@ console.log(bank(5630));
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
+// есть массив, вернуть массив уникальных и отсортированных. Сортировка в таком порядке:
+// которые встречаются чаще в начале, которые меньше в конце
+// ['banana', 'grapefruit', 'orange']
+let words = ['banana', 'grapefruit', 'banana', 'grapefruit', 'banana', 'orange'];
+
+let words2 = [
+	'banana',
+	'grapefruit',
+	'banana',
+	'grapefruit',
+	'banana',
+	'orange',
+	'banana',
+	'orange',
+	'orange',
+	'orange',
+	'orange',
+	'orange',
+];
+
+function sortArr(arrWords) {
+	const arrObjects = arrWords.reduce((acc, current, ix, array) => {
+		const obj = {};
+		if (acc.find((i) => i.name === current)) {
+			const index = acc.findIndex((i) => i.name === current);
+			++acc[index].count;
+		} else {
+			obj.name = current;
+			obj.count = 1;
+			acc.push(obj);
+		}
+		return acc;
+	}, []);
+	const sortArr = arrObjects.sort((a, b) => b.count - a.count);
+	const newArr = [];
+	sortArr.map((i) => {
+		newArr.push(i.name);
+	});
+	return newArr;
+}
+
+console.log(sortArr(words2));
+
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
