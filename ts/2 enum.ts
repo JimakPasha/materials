@@ -24,7 +24,7 @@ Directions.Down; // 4
 Directions.Left; // 6
 Directions.Right; // 7
 
-но данные мы можем получить и по ключу
+// но данные мы можем получить и по ключу
 
 enum Directions2 {
     Up
