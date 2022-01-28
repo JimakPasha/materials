@@ -40,3 +40,9 @@
 
 Материалы:
 https://bestprogrammer.ru/izuchenie/struktura-dannyh-101-realizatsiya-hesh-tablits-v-javascript
+
+
+
+//
+Гарвард. CS50 на русском. 0. Дополнительные видео. 3. Хеш-таблица. 3:11
+Используем хэш-таблицы, если нас не волнует, будут ли отсортированы данные или нет
