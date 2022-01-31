@@ -28,6 +28,10 @@ const max: User = {
     age: 20,
 }
 
+// мы можем указывать к какому типу будет относиться объект
+const john = {} as User;
+const john2 = <User>{}; // альтернативная более старая запись
+
 // readonly - для блокировки изменений
 // ещё фича на лишние свойства. Т.е. свойства которые не описаны в интерфейсе, но прописаны в объекте, будут выкидывать exception
 
@@ -100,4 +104,16 @@ class Yauhen1111 implements Admin {
     getPass() {
         return `${this.name}${this.age}`;
     }
+}
+
+// ещё классная штука, если мы не знаем сколько там будет свойств, но знаем что у них будут одинаковые типы данных
+
+interface Styles {
+    [key: string]: string
+}
+
+const css: Styles = {
+    border: '1px solid black',
+    marginTop: '2px',
+    borderRadius: '5px',
 }

@@ -26,4 +26,12 @@ useRef
 
 24.01
 HOC
-zoom
+
+26.01
+stopPropagation, stopImmediatePropagation, target, currentTarget
+
+29.01
+хеш-таблицы
+
+30.01
+reveal.js html presentation фреймворк
