@@ -61,3 +61,21 @@ class User4 {
     ) {}
 }
 
+// ---------------------------------------------------
+// Абстрактные классы (они ни во что не компилируются, нужны только на этапе разработки, для того, чтобы от них наследоваться)
+// Тут мы просто описываем методы, которые должны быть реализованы у классов, которые будут наследоваться от этого компонента
+
+abstract class Component {
+    abstract render(): void
+    abstract info(): string
+}
+
+class AppComponent extends Component {
+    render(): void {
+        console.log('Component on render');
+    }
+
+    info(): string {
+        return 'String';
+    }
+}
