@@ -1,0 +1,5 @@
+babel-preset-react
+
+npm i --save-dev babel-preset-react
+
+настройка транспилятора для работы с React-кодом.
