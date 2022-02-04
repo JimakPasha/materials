@@ -35,3 +35,9 @@ stopPropagation, stopImmediatePropagation, target, currentTarget
 
 30.01
 reveal.js html presentation фреймворк
+
+03.02
+redux-thunk
+
+04.02
+юнит тестирование jest
