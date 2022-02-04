@@ -1,0 +1,13 @@
+{
+	"name": "jest",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^27.4.7"
+	},
+	"dependencies": {
+		"axios": "^0.25.0"
+	}
+}
