@@ -41,3 +41,6 @@ redux-thunk
 
 04.02
 юнит тестирование jest
+
+07.02
+запустил сервер на nest.js, подключился к БД MongoDB, REST API, DTO, потестировал с помощью postman
