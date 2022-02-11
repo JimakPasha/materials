@@ -19,4 +19,3 @@ getter('test').length;    // 4
 getter<number>(10).length;		  // Property 'length' does not exist on type '10'
 getter<string>('test').length;	// 4
 
-// generic типы и классы
