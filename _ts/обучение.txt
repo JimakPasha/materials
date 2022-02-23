@@ -1,0 +1,4 @@
+1) карманный ts https://typescript-handbook.ru/docs/intro
+2) ts быстро Яков Файн и Антон Моисеев
+3) курс udemy https://www.udemy.com/course/typescript-bootcamp/
+4) и практика (переложить проект который раньше делал на ts)
