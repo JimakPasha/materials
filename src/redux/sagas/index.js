@@ -1,13 +1,15 @@
-import { take } from '@redux-saga/core/effects';
-import { INCREMENT, DECREMENT } from '../constants';
+import { takeEvery, put, call } from '@redux-saga/core/effects';
+import { GET_LATEST_NEWS } from '../constants';
+import { getLatestNews } from '../../api/index';
+import { setLatestNews } from '../actions/actionCreator';
 
-export function* workerSaga() {}
+export function* handleLatestNews() {
+	const { hits } = yield call(getLatestNews, 'react');
+	yield put(setLatestNews(hits));
+}
 
 export function* watchClickSaga() {
-	yield take(INCREMENT);
-	console.log('req 1');
-	yield take(DECREMENT);
-	console.log('req 2');
+	yield takeEvery(GET_LATEST_NEWS, handleLatestNews);
 }
 
 export default function* rootSaga() {
