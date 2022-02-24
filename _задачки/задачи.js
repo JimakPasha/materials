@@ -52,3 +52,14 @@ console.log(extraPerfect(5)); // [1,3,5]
 console.log(extraPerfect(7)); // [1,3,5,7]
 console.log(extraPerfect(28)); // [1,3,5,7,9,11,13,15,17,19,21,23,25,27]
 console.log(extraPerfect(39)); // [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35,37,39]
+
+// ------
+// поменять местами первый и последний элемент массива. ниже костыльный способ по быстрому накидал
+let arr = [0, 1, 2, 3, 4];
+console.log(arr);
+
+arr.splice(arr.length, 0, arr[0]);
+arr.splice(0, 1, arr[arr.length - 2]);
+arr.splice(arr.length - 2, 1);
+
+console.log(arr);
