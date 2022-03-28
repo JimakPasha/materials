@@ -6,8 +6,8 @@ export default function Input() {
 
   return (
     <div className='input-box'>
-      <input {...username} type="text" placeholder="Username" />
-      <input {...password} type="text" placeholder="Password" />
+      <input {...username} />
+      <input {...password} />
       <button onClick={() => console.log(username.value, password.value)}>
         Click
       </button>
