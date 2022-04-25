@@ -70,6 +70,9 @@ git push
 удалённые ветки
 git checkout -b totallyNotMain o/main
 
+-u
+флаг (развёрнуто называется set-upstream), если мы его устанавливаем при команде например git push -u origin main, значит потом мы можем push делать без указания origin main, a просто git push, и он запушит на эту ветку 
+
 	
 
 Remote Rejected!
